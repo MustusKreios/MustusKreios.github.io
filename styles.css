@@ -1,0 +1,131 @@
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+header {
+    color: #ffe6a7;
+    background: #432818;
+    padding: 20px;
+    display: flex; /* Make header a flex container */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+h2{
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 10px;
+
+}
+
+
+
+body {
+    margin: 0;
+    background: #ffe6a7;
+    height: 100vh; /* Ensure body takes full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #99582a;
+    width: 450px; /* Set nav to full width */
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+    display: flex; /* Use flexbox to evenly distribute space */
+    justify-content: space-around; /* Evenly space items */
+    align-items: center; /* Center items vertically */
+    position: relative;
+}
+
+nav a {
+    color: #ffe6a7;
+    text-decoration: none;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 16px; /* Adjusted font size for navigation links */
+    display: inline-block;
+    text-align: center;
+    width: 100px; /* Set a fixed width for each link */
+    position: relative; /* Set position relative for z-index */
+    z-index: 1; /* Ensure the links are above the animation */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+
+
+nav a:hover {
+    color: white;
+}
+
+nav .animation {
+    height: 50px;
+    top: 0;
+    background: #6f1d1b;
+    width: 120px;
+    position: absolute; /* Position absolute to move it */
+    transition: all 0.5s ease; /* Smooth transition */
+    z-index: 0;
+    border-radius: 10px;
+}
+
+nav .animation.start-home {
+    left: 0px;
+}
+
+nav a:nth-child(1):hover ~ .animation {
+    left: 0px;
+}
+nav a:nth-child(2):hover ~ .animation {
+    left: 112px;
+}
+nav a:nth-child(3):hover ~ .animation {
+    left: 224px;
+}
+nav a:nth-child(4):hover ~ .animation {
+    left: 336px;
+}
+
+div {
+    flex-grow: 1; /* Ensure div takes remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#RETRO {
+    opacity: 0; /* Start with hidden opacity */
+    color: #6f1d1b;
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    font-size: px; /* Adjusted font size for the main heading */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and transform */
+    text-align: center;
+    transform: translateX(-100%); /* Start off-screen to the left */
+}
+
+div:hover #RETRO {
+    animation: slideInFromLeft 1s ease-out forwards; /* Slide in animation */
+}
+
+div:not(:hover) #RETRO {
+    animation: slideOutToRight 1s ease-out forwards; /* Slide out animation */
+}

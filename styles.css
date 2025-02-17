@@ -12,6 +12,7 @@ body {
     color: #ededed;
 }
 
+/* Header start */
 .header {
     position: fixed;
     top: 0;
@@ -21,14 +22,29 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    z-index: 100;
+    z-index: 200;
+    background: #100C08;
 }
 
 .logo {
+    position: relative;
     font-size: 25px;
     color: #ff0000;
     text-decoration: none;
     font-weight: 600;
+    display: inline-block;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: .4s;
 }
 
 .navbar a{
@@ -45,8 +61,11 @@ body {
     color: #ff0000;
 
 }
+/* Header end */
 
-.home {
+
+/* Home start */
+#home {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -58,22 +77,61 @@ body {
 }
 
 .home-content h1 {
+    position: relative;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
 
 }
 
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
 .home-content h3 {
+    position: relative;
     color: #ff0000;
     font-size: 30px;
     padding: 10;
 
 }
 
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
 .home-content p {
+    position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 1.5s;
 }
 
 .home-content .btn-box {
@@ -81,6 +139,10 @@ body {
     justify-content: space-between;
     width: 345px;
     height: 50px;
+}
+
+.btn-box {
+    position: relative;
 }
 
 .btn-box a{
@@ -98,12 +160,42 @@ body {
     letter-spacing: 1px;
     font-size: 19px;
     color: #100C08;
+    transition: transform 0.3s ease-in-out;
     z-index: 1;
+}
+
+.btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 1.7s;
+    z-index: 2;
+}
+
+.btn-box a:nth-child(1) {
+    position: relative;
+    font-size: 14px;
+    border: 2px solid white;
+    box-shadow: 0 0 50px #ff0000;
+
+    opacity: 0; 
+    visibility: hidden; 
+    animation: showButton 0.3s ease forwards;
+    animation-delay: 1.7s;
 }
 
 .btn-box a:nth-child(2) {
     background: transparent;
     color: #ff0000;
+}
+
+.btn-box a:hover {
+    transform: scale(1.2);
 }
 
 .soc-icon {
@@ -113,6 +205,20 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.soc-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
 
 .soc-icon a {
     position: relative;
@@ -127,6 +233,7 @@ body {
     font-size: 20px;
     color: #ff0000;
     text-decoration: none;
+    transition: transform 0.3s ease-in-out;
     z-index: 1;
 }
 
@@ -149,19 +256,91 @@ body {
 
 .soc-icon a:hover {
     color: black;
+    transform: scale(1.5);
 }
 
 .home-imghover {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 600px;
+    width: 700px;
     height: 100%;
-    border: 2px solid red;
-    transition: 3s;
 }
 
 .home-imghover:hover {
-    background: red;
+    background: #100C08;
     opacity: .8;
+}
+
+.home-imghover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #100C08;
+    animation: uncoverLeft 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 100;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(20%);
+    z-index: -1;
+}
+
+.home-image img {
+    width: 600px !important;
+    height: auto !important;
+}
+/* Home end */
+
+/* About start */
+#about {
+    background: red;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+/* About end */
+
+/* Service start */
+#service {
+    background: #ededed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: #100C08;
+}
+/* Service end */
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes uncoverLeft {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes showButton {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }

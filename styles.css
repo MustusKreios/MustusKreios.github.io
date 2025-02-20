@@ -502,14 +502,10 @@ body::before {
     text-align: left;
 }
 
+.typing-effect{
+    padding-bottom: 5px;
+}
 
-    .typing-effect {
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 2px solid red;
-        display: inline-block;
-        animation: typing 3s steps(20) infinite, blink 0.6s infinite alternate;
-    }
 
 /* GitHub icon styling */
 .card a {

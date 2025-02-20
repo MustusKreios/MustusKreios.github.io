@@ -10,6 +10,23 @@
 body {
     background: #100C08;
     color: #ededed;
+    flex-wrap: wrap;
+}
+/* Grid Background Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
+
+    z-index: -1; /* Keeps it in the background */
 }
 
 /* Header start */
@@ -23,7 +40,6 @@ body {
     justify-content: space-between; 
     align-items: center;
     z-index: 200;
-    background: #100C08;
 }
 
 .logo {
@@ -42,7 +58,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08
     animation: uncoverLeft 1s ease forwards;
     animation-delay: .4s;
 }
@@ -91,7 +107,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 1s;
 }
@@ -111,7 +131,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 1.3s;
 }
@@ -129,7 +153,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 1.5s;
 }
@@ -171,7 +199,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 1.7s;
     z-index: 2;
@@ -213,7 +245,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #100C08;
+    background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 1.9s;
     z-index: 2;
@@ -263,12 +299,17 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 700px;
+    width: 710px;
     height: 100%;
+    transition: 1.5s;
 }
 
 .home-imghover:hover {
     background: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     opacity: .8;
 }
 
@@ -280,6 +321,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: #100C08;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px; /* Adjust size of grid squares */
     animation: uncoverLeft 1s ease forwards;
     animation-delay: 2s;
     z-index: 100;
@@ -302,24 +347,283 @@ body {
 
 /* About start */
 #about {
-    background: red;
-    height: 70vh;
     display: flex;
-    align-items: center;
+    justify-content: center;
     padding: 0 10%;
+    
 }
+
+.about-content {
+    max-width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.educ-content h2 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    color: #ff0000;
+
+}
+
+.educational-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.college {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ededed;
+    padding-bottom: 20px;
+}
+
+.shs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #100C08;
+    padding-bottom: 20px;
+
+}
+
+.e-left {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.e-right {
+    flex: 2;
+    font-size: 1rem;
+}    
+
+
+
+.skill h2{
+    margin-top: 5%;
+    color: #ff0000;
+    font-size: 56px;
+    text-align: center; 
+}
+
+.skill-content{
+
+    display: flex;
+    justify-content: center; /* Centers the cards */
+    gap: 15px; /* Adjust spacing between cards */
+    font-size: 15px;
+    color: #ff0000;
+    padding-top: 5%;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.skill-container {
+    width: 200px;
+    height: 50px;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    position: relative;
+    display: flex;  /* Enables flexbox */
+    flex-direction: column;  /* Stacks content top to bottom */
+    justify-content: center;  /* Centers content vertically */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.s-name {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.skill-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+    
 /* About end */
 
 /* Service start */
-#service {
-    background: #ededed;
-    height: 100vh;
+#project {
+    height: 80vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
-    color: #100C08;
+    justify-content: center;
+    flex-direction: column;
 }
-/* Service end */
+
+.project-content {
+    margin-top: 0;
+    width: 100%;
+    text-align: center; /* Centers the h2 */
+}
+
+.project-content h2 {
+    color: #ff0000;
+    font-size: 56px;
+    font-weight: 700px;
+    text-align: center; /* Ensure it's centered */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centers the cards */
+    gap: 40px; /* Adjust spacing between cards */
+    font-size: 12px;
+    color: #ff0000;
+    padding-top: 5%;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #ff0000;
+    border-radius: 30px;
+    position: relative;
+    display: flex;  /* Enables flexbox */
+    flex-direction: column;  /* Stacks content top to bottom */
+    justify-content: center;  /* Centers content vertically */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+.text-container {
+    text-align: left;
+}
+
+
+    .typing-effect {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid red;
+        display: inline-block;
+        animation: typing 3s steps(20) infinite, blink 0.6s infinite alternate;
+    }
+
+/* GitHub icon styling */
+.card a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ff0000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff0000;
+    border-radius: 50%;
+    z-index: -1;
+    transition: width 0.3s;
+}
+
+.card a:hover::before {
+    width: 100%;
+}
+
+.card a:hover {
+    color: black;
+    transform: translateX(-50%) scale(1.3); /* Slightly larger on hover */
+}
+
+
+
+
+#sample {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Card Container */
+.cardss {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Small Cards */
+.card1 {
+    background-color: #151515;
+    height: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
+}
+
+/* First Row (3 small cards) */
+.card1:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+.card1:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+.card1:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* Large Card (Spans 2 rows and 2 columns) */
+.card-big {
+    background-color: #151515;
+    height: 320px;
+    grid-column: 1 / span 2; /* Takes up first 2 columns */
+    grid-row: 2 / span 2; /* Takes up 2 rows */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+/* Right Side Small Cards */
+.card1:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+.card1:nth-child(5) {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+/* Hover Effect */
+.card1:hover,
+.card-big:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
 
 
 /* KEYFRAMES ANIMATION */
@@ -343,4 +647,13 @@ body {
         opacity: 1;
         visibility: visible;
     }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }

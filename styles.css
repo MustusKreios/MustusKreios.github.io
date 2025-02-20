@@ -359,6 +359,10 @@ body::before {
     margin-bottom: 50px;
 }
 
+.educ-content {
+    max-width: 1200px;
+}
+
 .educ-content h2 {
     position: relative;
     font-size: 56px;
@@ -414,6 +418,7 @@ body::before {
 
     display: flex;
     justify-content: center; /* Centers the cards */
+    align-items: center;
     gap: 15px; /* Adjust spacing between cards */
     font-size: 15px;
     color: #ff0000;
@@ -432,7 +437,6 @@ body::before {
     justify-content: center;  /* Centers content vertically */
     padding: 10px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-    transition: box-shadow 0.3s ease-in-out;
 }
 
 .s-name {
@@ -459,7 +463,7 @@ body::before {
 
 .project-content {
     margin-top: 0;
-    width: 100%;
+    max-width: 1200px;
     text-align: center; /* Centers the h2 */
 }
 
@@ -567,14 +571,14 @@ body::before {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 /* Small Cards */
 .card1 {
     background-color: #151515;
-    height: 150px;
+    height: 170px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
 }
@@ -596,7 +600,7 @@ body::before {
 /* Large Card (Spans 2 rows and 2 columns) */
 .card-big {
     background-color: #151515;
-    height: 320px;
+    height: 350px;
     grid-column: 1 / span 2; /* Takes up first 2 columns */
     grid-row: 2 / span 2; /* Takes up 2 rows */
     border-radius: 12px;

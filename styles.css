@@ -58,7 +58,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #100C08
+    background: #100C08;
     animation: uncoverLeft 1s ease forwards;
     animation-delay: .4s;
 }
